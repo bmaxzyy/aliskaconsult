@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliska Commodities — From soil to global markets</title>
+  <!-- Montserrat font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    * , *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; }
+
+    /* ===== .pg SCOPE — all page tokens & components ===== */
+    .pg {
+      --navy-950: #0a1d30;
+      --navy-900: #0f2a43;
+      --navy-800: #1c3a5c;
+      --gold-500: #c89b3c;
+      --gold-400: #d9b559;
+      --gold-100: #f3e6c4;
+      --rust-500: #b3572c;
+      --green-600: #2e7d4f;
+      --cream: #f6f1e6;
+      --paper: #fffdf9;
+      --surface: #ffffff;
+      --heading-ink: var(--navy-900);
+      --ink-900: #1c2230;
+      --ink-600: #55606f;
+      --ink-400: #848c99;
+      --line: #e7e0d0;
+      --radius: 10px;
+      --shadow: 0 16px 40px rgba(15, 42, 67, 0.14);
+      --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      font-family: var(--font-body);
+      color: var(--ink-900);
+      background: var(--paper);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Dark mode tokens */
+    [data-theme="dark"] .pg {
+      --paper: #0b1420;
+      --cream: #101c2c;
+      --surface: #101c2c;
+      --heading-ink: var(--gold-100);
+      --ink-900: #f2efe6;
+      --ink-600: #c6cbd6;
+      --ink-400: #8b93a3;
+      --line: #223349;
+      --rust-500: #e0784b;
+      --green-600: #5cd68a;
+    }
+
+    .pg img { max-width: 100%; display: block; }
+    .pg a { color: inherit; text-decoration: none; }
+    .pg ul { margin: 0; padding: 0; list-style: none; }
+    .pg h1, .pg h2, .pg h3, .pg h4 {
+      font-family: var(--font-display);
+      color: var(--heading-ink);
+      line-height: 1.15;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .pg p { margin: 0; color: var(--ink-600); }
+    .pg button { font-family: inherit; cursor: pointer; }
+    .pg :focus-visible { outline: 3px solid var(--gold-500); outline-offset: 2px; }
+
+    .rule {
+      max-width: 1180px;
+      margin: 0 auto;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* ===== TRADING HERO ===== */
+    .trading-hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 24px 64px;
+      text-align: center;
+    }
+    .trading-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .trading-hero h1 span { color: var(--gold-500); }
+    .trading-hero p {
+      margin: 22px auto 0;
+      max-width: 46ch;
+      font-size: 1.1rem;
+      color: var(--ink-600);
+    }
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .btn-gold, .btn-outline-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid transparent;
+      transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+    }
+    .btn-gold { background: var(--gold-500); color: var(--navy-950); }
+    .btn-gold:hover { background: var(--gold-400); transform: translateY(-2px); }
+    .btn-outline-gold { border-color: var(--line); color: var(--heading-ink); }
+    .btn-outline-gold:hover { border-color: var(--heading-ink); transform: translateY(-2px); }
+
+    .trust {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: var(--ink-400);
+    }
+    .trust span { position: relative; padding-left: 22px; }
+    .trust span::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold-500);
+      transform: translateY(-50%);
+    }
+
+    /* ===== SECTION SHELL ===== */
+    #products, .log, .about { max-width: 1180px; margin: 0 auto; padding: 72px 24px; }
+    .sec-h { max-width: 520px; margin: 0 auto 40px; text-align: center; }
+    .sec-h h2 { font-size: 1.9rem; margin-bottom: 10px; }
+    .sec-h p { font-size: 0.98rem; }
+    .sec-h .count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 26px;
+      height: 26px;
+      padding: 0 8px;
+      margin-left: 8px;
+      background: var(--gold-100);
+      color: var(--navy-900);
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .card {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      cursor: pointer;
+      transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    }
+    .card:hover, .card:focus-visible {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--gold-500);
+    }
+
+    /* ----- Product visual: image tile (new) + glyph fallback ----- */
+    .tile {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--navy-900);
+      color: var(--gold-400);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .tile--img {
+      width: 70%;
+      height: 170px;
+      border-radius: 8px;
+      background: var(--navy-900);
+      overflow: hidden;
+      margin-bottom: 18px;
+      display: block;
+    }
+    .tile--img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 400ms ease;
+    }
+    .card:hover .tile--img img { transform: scale(1.06); }
+
+    .card-body h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .card-origin { font-size: 0.85rem; color: var(--ink-400); margin-bottom: 14px; }
+    .cert {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--navy-900);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    [data-theme="dark"] .pg .cert { background: var(--gold-100); color: var(--navy-950); border-color: transparent; }
+    .price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 8px; }
+    .price { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--heading-ink); }
+    .per { font-size: 0.82rem; color: var(--ink-400); }
+    .stock { font-size: 0.82rem; font-weight: 600; margin-bottom: 16px; }
+    .stock.ok { color: var(--green-600); }
+    .stock.low { color: var(--rust-500); }
+    .go {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--heading-ink);
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      transition: color 200ms ease;
+    }
+    .card:hover .go { color: var(--gold-500); }
+
+    /* ===== RECENT REQUESTS LOG ===== */
+    .log { background: var(--navy-950); border-radius: var(--radius); color: #cfd6e0; max-width: 1180px; }
+    .log .sec-h { color: #fff; }
+    .log .sec-h h2 { color: #fff; }
+    .log .sec-h p { color: #b7c0cf; }
+    .empty {
+      text-align: center;
+      padding: 32px;
+      border: 1px dashed #2b3d55;
+      border-radius: var(--radius);
+      color: #8b94a6;
+      font-size: 0.92rem;
+    }
+    .log-list { display: flex; flex-direction: column; gap: 10px; }
+    .log-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      align-items: center;
+      gap: 16px;
+      background: #101c2c;
+      border: 1px solid #223349;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.88rem;
+    }
+    .log-item .ref { font-family: var(--font-display); font-weight: 700; color: var(--gold-400); }
+    .log-item .what { color: #dfe4ec; }
+    .log-item .meta { color: #8b94a6; font-size: 0.8rem; }
+    .log-item .pill {
+      background: rgba(46, 125, 79, 0.18);
+      color: #5cd68a;
+      font-weight: 600;
+      font-size: 0.76rem;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about h2 { text-align: center; font-size: 1.9rem; margin: 48px 0 36px; }
+    .about-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .about-cols p { font-size: 1.02rem; }
+    .about-cols ul li {
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      color: var(--ink-600);
+    }
+    .about-cols ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      background: var(--gold-500);
+    }
+
+    /* ===== MODAL ===== */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 20, 32, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 300;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 220ms ease;
+    }
+    .overlay.open { opacity: 1; pointer-events: auto; }
+    .modal {
+      background: var(--surface);
+      width: 100%;
+      max-width: 880px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 16px;
+      position: relative;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      transform: translateY(16px);
+      transition: transform 220ms ease;
+    }
+    .overlay.open .modal { transform: translateY(0); }
+    .m-accent { height: 6px; background: linear-gradient(90deg, var(--gold-500), var(--navy-900)); border-radius: 16px 16px 0 0; }
+    .close {
+      position: absolute;
+      top: 18px; right: 18px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink-600);
+      font-size: 1rem;
+      z-index: 2;
+    }
+    .close:hover { border-color: var(--heading-ink); color: var(--heading-ink); }
+
+    .m-cols { display: grid; grid-template-columns: 1fr 1fr; }
+    .m-detail { padding: 44px 36px; border-right: 1px solid var(--line); }
+
+    /* ----- Modal visual: image (new) + glyph fallback ----- */
+    .m-tile {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--navy-900); color: var(--gold-400);
+      font-family: var(--font-display); font-weight: 700; font-size: 1.15rem;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .m-tile--img {
+      width: 100%;
+      height: 190px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      background: var(--navy-900);
+    }
+    .m-tile--img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .m-name { font-family: var(--font-display); font-size: 1.5rem; color: var(--heading-ink); margin-bottom: 4px; }
+    .m-origin { font-size: 0.88rem; color: var(--ink-400); margin-bottom: 16px; }
+    .m-certs { margin-bottom: 18px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .m-certs .cert { margin-bottom: 0; }
+    .m-price-row { margin-bottom: 8px; }
+    .m-price { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--heading-ink); }
+    .m-stock { font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+    .m-stock.ok { color: var(--green-600); }
+    .m-stock.low { color: var(--rust-500); }
+    .m-desc { font-size: 0.95rem; margin-bottom: 18px; }
+    .m-feats li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+      color: var(--ink-600);
+    }
+    .m-feats li::before {
+      content: '';
+      position: absolute; left: 0; top: 7px;
+      width: 7px; height: 7px; border-radius: 2px;
+      background: var(--gold-500);
+    }
+
+    .m-form-wrap { padding: 44px 36px; background: var(--cream); border-radius: 0 0 16px 0; }
+    .m-form-wrap h3 { font-size: 1.2rem; margin-bottom: 20px; }
+    #reqForm label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--heading-ink);
+      margin-bottom: 16px;
+    }
+    #reqForm label em, #reqForm label i { font-weight: 400; color: var(--ink-400); font-style: normal; margin-left: 4px; }
+    #reqForm input[type="text"],
+    #reqForm input[type="email"],
+    #reqForm input[type="number"],
+    #reqForm select,
+    #reqForm textarea {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--ink-900);
+      background: var(--surface);
+      transition: border-color 200ms ease;
+    }
+    #reqForm input:focus, #reqForm select:focus, #reqForm textarea:focus { border-color: var(--gold-500); }
+    #reqForm textarea { resize: vertical; }
+    .chk { display: flex; align-items: flex-start; gap: 10px; font-weight: 400 !important; font-size: 0.85rem !important; color: var(--ink-600); }
+    .chk input { width: 16px; height: 16px; margin-top: 3px; accent-color: var(--gold-500); }
+    .err { display: block; color: var(--rust-500); font-size: 0.78rem; margin-top: 6px; font-weight: 500; min-height: 1.1em; }
+    #reqForm button[type="submit"] { width: 100%; justify-content: center; margin-top: 6px; }
+    #reqForm button[disabled] { opacity: 0.7; cursor: progress; }
+
+    /* ===== SUCCESS VIEW ===== */
+    .m-success { padding: 56px 44px; text-align: center; }
+    .ok-ring {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(46, 125, 79, 0.12);
+      color: var(--green-600);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .m-success h3 { font-size: 1.5rem; margin-bottom: 10px; }
+    .ref {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--gold-500);
+      background: var(--gold-100);
+      padding: 8px 18px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .s-summary {
+      max-width: 420px;
+      margin: 0 auto 22px;
+      text-align: left;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .s-summary div {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 18px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .s-summary div:last-child { border-bottom: none; }
+    .s-summary span { color: var(--ink-400); }
+    .s-summary b { color: var(--heading-ink); font-weight: 600; text-align: right; }
+    .s-note { max-width: 400px; margin: 0 auto 28px; font-size: 0.9rem; }
+    .s-btns { display: flex; justify-content: center; gap: 14px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .about-cols { grid-template-columns: 1fr; }
+      .m-cols { grid-template-columns: 1fr; }
+      .m-detail { border-right: none; border-bottom: 1px solid var(--line); }
+      .m-form-wrap { border-radius: 0; }
+    }
+    @media (max-width: 640px) {
+      .trading-hero { padding: 48px 20px 40px; }
+      #products, .log, .about { padding: 56px 20px; }
+      .grid { grid-template-columns: 1fr; }
+      .log-item { grid-template-columns: 1fr; align-items: flex-start; gap: 6px; }
+      .m-detail, .m-form-wrap { padding: 32px 22px; }
+      .modal { max-height: 94vh; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01ms !important; }
+    }
+
+    /* ===== SITE CHROME (simplified for standalone preview) ===== */
+    .topbar {
+      background: var(--navy-950, #0a1d30);
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 10px 0;
+    }
+    .topbar .container,
+    .site-header .container,
+    .site-footer .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .topbar a { color: #fff; text-decoration: none; }
+    .topbar__social { display: flex; gap: 14px; }
+    .topbar__social a { font-size: 1rem; }
+
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #e7e0d0;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo img { height: 40px; }
+    .logo .logo-dark { display: none; }
+    .main-nav__list {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .main-nav__list a {
+      text-decoration: none;
+      color: #1c2230;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .main-nav__list a[aria-current="page"] { color: #c89b3c; font-weight: 700; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      border: 2px solid transparent;
+    }
+    .btn-primary { background: #c89b3c; color: #0a1d30; }
+    .btn-outline { border-color: #e7e0d0; color: #0f2a43; }
+    .header-actions { display: flex; gap: 10px; align-items: center; }
+    .theme-toggle, .nav-toggle {
+      background: none;
+      border: 1px solid #e7e0d0;
+      border-radius: 8px;
+      width: 38px; height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .nav-toggle .bar {
+      display: block;
+      width: 18px; height: 2px;
+      background: #0f2a43;
+      margin: 3px 0;
+    }
+    .nav-toggle { display: none; }
+    .nav-backdrop { display: none; }
+
+    .site-footer {
+      background: #0a1d30;
+      color: #cfd6e0;
+      margin-top: 60px;
+    }
+    .site-footer .ftr__cta {
+      background: #0f2a43;
+      padding: 48px 0;
+    }
+    .ftr__cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .ftr__cta .eyebrow { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #c89b3c; font-weight: 700; }
+    .ftr__cta h2 { color: #fff; font-size: 1.7rem; margin-top: 6px; }
+    .ftr__cta-actions { display: flex; gap: 14px; }
+    .ftr__main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      padding: 56px 24px;
+    }
+    .ftr__brand p { font-size: 0.88rem; color: #8b94a6; margin-top: 14px; }
+    .ftr__brand .logo img { height: 38px; }
+    .ftr__social { display: flex; gap: 12px; margin-top: 18px; }
+    .ftr__social a { color: #cfd6e0; }
+    .ftr__col h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; }
+    .ftr__col ul { list-style: none; padding: 0; margin: 0; }
+    .ftr__col li { margin-bottom: 10px; font-size: 0.86rem; color: #8b94a6; }
+    .ftr__col a { color: #cfd6e0; text-decoration: none; }
+    .ftr__col a:hover { color: #c89b3c; }
+    .ftr__contact-list li { display: flex; gap: 10px; align-items: flex-start; }
+    .ftr__contact-list svg { flex-shrink: 0; margin-top: 3px; }
+    .newsletter-form { display: flex; gap: 8px; margin-top: 12px; }
+    .newsletter-form input {
+      flex: 1;
+      padding: 10px 12px;
+      border: 1px solid #223349;
+      border-radius: 6px;
+      background: #101c2c;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.86rem;
+    }
+    .newsletter-form button {
+      background: #c89b3c;
+      color: #0a1d30;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .ftr__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 24px;
+      border-top: 1px solid #1c3a5c;
+      font-size: 0.8rem;
+      color: #8b94a6;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .ftr__back-top { color: #cfd6e0; text-decoration: none; }
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #0f2a43;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      z-index: 200;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+    .cookie-banner a { color: #c89b3c; }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: #0a1d30;
+      color: #fff;
+      padding: 10px 16px;
+      z-index: 999;
+    }
+    .skip-link:focus { left: 0; }
+
+    @media (max-width: 980px) {
+      .ftr__main { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 760px) {
+      .main-nav__list { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .ftr__main { grid-template-columns: 1fr; }
+      .ftr__cta-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="container">
+    <span class="topbar__phone">Call Us: <a href="tel:+233302907260">(+233) 302 907 260</a></span>
+    <div class="topbar__social" aria-label="Social media links">
+      <a href="https://twitter.com/aliska_consult" aria-label="Aliska on Twitter" target="_blank" rel="noopener">𝕏</a>
+      <a href="https://web.facebook.com/Aliska-Consult-548899362145637/" aria-label="Aliska on Facebook" target="_blank" rel="noopener">f</a>
+      <a href="https://www.instagram.com/aliska_consult/" aria-label="Aliska on Instagram" target="_blank" rel="noopener">◎</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="images/logo-123.png" class="logo-light" alt="Aliska Consult">
+      <img src="images/logo-white.png" class="logo-dark" alt="Aliska Consult">
+    </a>
+    <div class="nav-backdrop"></div>
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="main-nav__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-services.html">Our Services</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="commodities.html" aria-current="page">Commodities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book-a-session.html" class="btn btn-primary">Book A Session</a></li>
+        <li><a href="https://emptyroom.aliskaconsult.com">The Empty Room</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="icon-sun" aria-hidden="true">☀</span>
+        <span class="icon-moon" aria-hidden="true">☾</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<div class="pg" id="top">
+
+  <header class="trading-hero">
+    <h1>From fertile soil<br>to <span>global markets</span>.</h1>
+    <p>Traceable bulk supply of natural produce — sourced directly from farmer cooperatives, delivered to your port.</p>
+    <div class="hero-btns">
+      <a class="btn-gold" href="#products">Browse products</a>
+      <a class="btn-outline-gold" href="#about">Our story</a>
+    </div>
+    <div class="trust"><span>ISO 22000 certified</span><span>14 origin countries</span><span>Est. 2011</span></div>
+  </header>
+  <div class="rule"></div>
+
+  <section id="products">
+    <div class="sec-h">
+      <h2>Our products</h2>
+      <p>Select a product to view specifications and request a quote.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="log" id="logSec">
+    <div class="sec-h"><h2>Recent requests <span class="count" id="reqCount">0</span></h2></div>
+    <div class="empty" id="logEmpty">No requests yet — select a product above to begin.</div>
+    <ul class="log-list" id="logList"></ul>
+  </section>
+
+  <section class="about" id="about">
+    <div class="rule"></div>
+    <h2>About Aliska Trading</h2>
+    <div class="about-cols">
+      <p>We are a natural produce trading house working at origin. Our buyers live in the growing regions, our agronomists train the cooperatives, and every lot is graded, tested and traceable back to the farm group that grew it.</p>
+      <ul>
+        <li>Direct trade with 60+ farmer cooperatives</li>
+        <li>Every lot lab-tested for purity and moisture</li>
+        <li>Full documentation: phytosanitary, certificate of origin, quality certs</li>
+        <li>Flexible terms — FOB, CIF or local delivery</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="overlay" id="overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="close" id="mClose" aria-label="Close">✕</button>
+      <div class="m-accent"></div>
+      <div class="m-cols" id="detailView">
+        <div class="m-detail">
+          <div id="mTile" class="m-tile">Co</div>
+          <div class="m-name" id="mTitle">—</div>
+          <div class="m-origin" id="mOrigin">—</div>
+          <div class="m-certs" id="mCerts"></div>
+          <div class="m-price-row">
+            <span class="m-price" id="mPrice">—</span>
+          </div>
+          <div class="m-stock" id="mStock"></div>
+          <p class="m-desc" id="mDesc"></p>
+          <ul class="m-feats" id="mFeats"></ul>
+        </div>
+        <div class="m-form-wrap">
+          <h3>Request a quote</h3>
+          <form id="reqForm" novalidate>
+            <input type="hidden" id="fId">
+            <label>Full name
+              <input id="fName" type="text" autocomplete="name" placeholder="e.g. Amara Okafor">
+              <span class="err" id="eName"></span>
+            </label>
+            <label>Email
+              <input id="fEmail" type="email" autocomplete="email" placeholder="you@company.com">
+              <span class="err" id="eEmail"></span>
+            </label>
+            <label>Quantity <em id="fUnit">(MT)</em>
+              <input id="fQty" type="number" min="1" step="any" placeholder="e.g. 20">
+              <span class="err" id="eQty"></span>
+            </label>
+            <label>Delivery terms
+              <select id="fDel">
+                <option>FOB — port of origin</option>
+                <option>CIF — destination port</option>
+                <option>Local delivery</option>
+              </select>
+            </label>
+            <label>Notes <i>(optional)</i>
+              <textarea id="fNotes" rows="2" placeholder="Target port, packaging, inspection…"></textarea>
+            </label>
+            <label class="chk">
+              <input type="checkbox" id="fTerms">
+              <span>I agree to the trading terms and confirm this request is non-binding.</span>
+            </label>
+            <span class="err" id="eTerms"></span>
+            <button type="submit" class="btn-gold" id="fSubmit">Submit request</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="m-success" id="successView" hidden>
+        <div class="ok-ring">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+        </div>
+        <h3>Request received</h3>
+        <div class="ref" id="sRef">REQ-00000</div>
+        <dl class="s-summary" id="sSummary"></dl>
+        <p class="s-note">Our trade desk will reply with a firm offer within one business day.</p>
+        <div class="s-btns">
+          <button class="btn-outline-gold" id="sAgain">Submit another</button>
+          <button class="btn-gold" id="sDone">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer ftr">
+  <div class="ftr__cta">
+    <div class="container ftr__cta-inner">
+      <div>
+        <span class="eyebrow">Let's work together</span>
+        <h2>Ready to grow with confidence?</h2>
+      </div>
+      <div class="ftr__cta-actions">
+        <a href="book-a-session.html" class="btn btn-primary">Book a session</a>
+        <a href="contact.html" class="btn btn-outline">Contact us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr__main container">
+    <div class="ftr__brand">
+      <a href="index.html">
+        <span class="logo"><img src="images/logo-white.png" alt=""></span>
+      </a>
+      <p>We are best known for quality work. We work with individuals, start-ups, large and midsize businesses, multi-national corporations, government agencies and non-profit organisations.</p>
+      <div class="ftr__social">
+        <a href="https://twitter.com/aliska_consult" aria-label="Aliska on Twitter" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="https://web.facebook.com/Aliska-Consult-548899362145637/" aria-label="Aliska on Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M14 22v-8h2.7l.4-3.3H14V8.6c0-.96.27-1.6 1.66-1.6H17V4.14C16.7 4.1 15.69 4 14.52 4 12.07 4 10.4 5.49 10.4 8.27v2.43H7.7V14h2.7v8h3.6z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/aliska_consult/" aria-label="Aliska on Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="ftr__col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="our-services.html">Financial Advisory</a></li>
+        <li><a href="our-services.html">Business Management</a></li>
+        <li><a href="our-services.html">Human Resource Advisory</a></li>
+        <li><a href="our-services.html">IT Advisory</a></li>
+        <li><a href="our-services.html">Corporate Strategy Consulting</a></li>
+        <li><a href="our-services.html">Accounting &amp; Tax Advisory</a></li>
+        <li><a href="our-services.html">Project Management</a></li>
+        <li><a href="commodities.html">Commodities Trading</a></li>
+      </ul>
+    </div>
+
+    <div class="ftr__col">
+      <h4>Contact</h4>
+      <ul class="ftr__contact-list">
+        <li>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+          <span>Church Crescent Street, Haatso, Accra</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .6 2.9a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.5 2.9.6a2 2 0 011.8 2.1z"/></svg>
+          <a class="footer-link" href="tel:+233302907260">(+233) 302 907 260</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 7 9-7"/></svg>
+          <a class="footer-link" href="mailto:K.aleem@aliskaconsult.com">K.aleem@aliskaconsult.com</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="ftr__col">
+      <h4>Newsletter</h4>
+      <p>Get all the latest content delivered to your email a few times a month.</p>
+      <form class="newsletter-form" novalidate>
+        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+        <button type="submit">Go</button>
+      </form>
+      <p class="form-msg" role="status"></p>
+    </div>
+  </div>
+
+  <div class="ftr__bottom container">
+    <span>&copy; <span id="year"></span> Aliska Business Advisory and Research. All rights reserved.</span>
+    <a href="#page-top" class="ftr__back-top">Back to top <span aria-hidden="true">&uarr;</span></a>
+  </div>
+</footer>
+
+<div class="cookie-banner">
+  <p>By continuing to use this website, you consent to the use of cookies in accordance with our <a href="#">Cookie Policy</a>.</p>
+  <button class="btn btn-primary cookie-accept" type="button">Accept</button>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+
+const P = [
+  {
+    id: 'cocoa',
+    glyph: 'Co',
+    img: 'images/cocoa.jpg',
+    name: 'Natural Cocoa Cake',
+    origin: 'Ghana · Accra',
+    price: 2850,
+    unit: 'MT',
+    stock: 120,
+    certs: ['Organic', 'Grade I'],
+    desc: 'Fermented and sun-dried Forastero beans from smallholder cooperatives. Rich, chocolatey profile ideal for premium dark chocolate production.',
+    feats: ['Moisture ≤ 8%', 'Bean count 95–105 per 100 g', '60 kg jute bags, palletized']
+  },
+  {
+    id: 'palmoil',
+    glyph: 'Po',
+    img: 'images/palm-oil.jpg',
+    name: 'Palm oil',
+    origin: 'Ghana · Accra',
+    price: 920,
+    unit: 'MT',
+    stock: 400,
+    certs: ['Organic', 'CP10'],
+    desc: 'Fresh-fruit-bunch pressed crude palm oil, refined to CP10 clarity. Consistent FFA profile for food and oleochemical use.',
+    feats: ['FFA ≤ 5%', 'Moisture & impurities ≤ 0.25%', 'Flexitanks or 200 L drums']
+  },
+  {
+    id: 'cashew',
+    glyph: 'Ca',
+    img: 'images/cashew.jpg',
+    name: 'Natural Cashew Nuts',
+    origin: 'Ghana · Accra',
+    price: 1650,
+    unit: 'MT',
+    stock: 85,
+    certs: ['Organic', 'W320'],
+    desc: 'Sun-dried raw cashew in shell, hand-sorted for kernel quality. Strong outturn ratios favored by processors.',
+    feats: ['Outturn 48–50 lbs', 'Moisture ≤ 10%', '80 kg jute bags']
+  },
+  {
+    id: 'shea',
+    glyph: 'Sh',
+    img: 'images/shea-butter.jpg',
+    name: 'Natural Shea Butter',
+    origin: 'Ghana · Accra',
+    price: 3200,
+    unit: 'MT',
+    stock: 45,
+    certs: ['Organic', 'Grade A'],
+    desc: "Unrefined shea butter traditionally hand-crafted by women's cooperatives. High olein content for cosmetics and food.",
+    feats: ['FFA ≤ 6%', 'Peroxide value ≤ 10 meq/kg', '25 kg cartons or drums']
+  },
+  {
+    id: 'ginger',
+    glyph: 'Gi',
+    img: 'images/ginger.jpg',
+    name: 'Natural Dried Ginger',
+    origin: 'Ghana · Accra',
+    price: 1450,
+    unit: 'MT',
+    stock: 200,
+    certs: ['Organic', 'Export grade'],
+    desc: 'Naturally sun-dried split ginger with high oleoresin content. Pungent, clean-dried and free of mould.',
+    feats: ['Moisture ≤ 10%', 'Oleoresin 3–5%', '50 kg polywoven bags']
+  },
+];
+
+function fmt(n) {
+  return n.toLocaleString('en-US');
+}
+
+/* ---- GRID RENDER ---- */
+const grid = $('#grid');
+
+grid.innerHTML = P.map(p => {
+  const low = p.stock <= 50;
+
+  // Image tile if img exists, else circular glyph
+  const visual = p.img
+    ? '<div class="tile tile--img"><img src="' + p.img + '" alt="' + p.name + '" loading="lazy" width="400" height="170"></div>'
+    : '<div class="tile">' + p.glyph + '</div>';
+
+  return '<div class="card" data-id="' + p.id + '" tabindex="0" role="button" aria-label="' + p.name + ' details">'
+    + visual
+    + '<div class="card-body">'
+    + '<h3>' + p.name + '</h3>'
+    + '<div class="card-origin">' + p.origin + '</div>'
+    + '<div><span class="cert">' + p.certs[0] + '</span></div>'
+    + '<div class="price-row"><span class="price">GH¢' + fmt(p.price) + '</span><span class="per">/ ' + p.unit + '</span></div>'
+    + '<div class="stock ' + (low ? 'low' : 'ok') + '">'
+    + (low ? 'Limited — ' + p.stock + ' ' + p.unit + ' left' : 'Available · ' + p.stock + ' ' + p.unit)
+    + '</div>'
+    + '<div class="go">View product →</div>'
+    + '</div></div>';
+}).join('');
+
+grid.addEventListener('click', e => {
+  const card = e.target.closest('.card');
+  if (card) openModal(card.dataset.id);
+});
+
+grid.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const card = e.target.closest('.card');
+    if (card) openModal(card.dataset.id);
+  }
+});
+
+/* ---- MODAL ---- */
+const overlay = $('#overlay');
+let current = null;
+
+function openModal(id) {
+  const p = P.find(x => x.id === id);
+  if (!p) return;
+  current = id;
+
+  // Modal visual: image if img, else glyph
+  const mTile = $('#mTile');
+  if (p.img) {
+    mTile.className = 'm-tile--img';
+    mTile.innerHTML = '<img src="' + p.img + '" alt="' + p.name + '" width="400" height="190">';
+  } else {
+    mTile.className = 'm-tile';
+    mTile.textContent = p.glyph;
+  }
+
+  $('#mTitle').textContent = p.name;
+  $('#mOrigin').textContent = p.origin;
+  $('#mCerts').innerHTML = p.certs.map(c => '<span class="cert">' + c + '</span>').join('');
+  $('#mPrice').textContent = 'GH¢ ' + fmt(p.price);
+
+  const low = p.stock <= 50;
+  const st = $('#mStock');
+  st.className = 'm-stock ' + (low ? 'low' : 'ok');
+  st.textContent = low
+    ? 'Limited — ' + p.stock + ' ' + p.unit + ' left'
+    : 'Available · ' + p.stock + ' ' + p.unit;
+
+  $('#mDesc').textContent = p.desc;
+  $('#mFeats').innerHTML = p.feats.map(f => '<li>' + f + '</li>').join('');
+
+  $('#fId').value = id;
+  $('#fUnit').textContent = '(' + p.unit + ')';
+  $('#fQty').placeholder = 'e.g. 20';
+
+  clearErrors();
+  $('#reqForm').reset();
+
+  const btn = $('#fSubmit');
+  btn.disabled = false;
+  btn.textContent = 'Submit request';
+
+  $('#detailView').style.display = '';
+  $('#successView').hidden = true;
+
+  overlay.classList.add('open');
+  overlay.scrollTop = 0;
+
+  setTimeout(() => $('#fName').focus(), 260);
+}
+
+function closeModal() {
+  overlay.classList.remove('open');
+  current = null;
+}
+
+$('#mClose').addEventListener('click', closeModal);
+
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) closeModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+});
+
+/* ---- FORM ---- */
+function clearErrors() {
+  ['eName', 'eEmail', 'eQty', 'eTerms'].forEach(i => $('#' + i).textContent = '');
+}
+
+let requests = 0;
+
+$('#reqForm').addEventListener('submit', e => {
+  e.preventDefault();
+  clearErrors();
+
+  const p = P.find(x => x.id === $('#fId').value);
+  const name = $('#fName').value.trim();
+  const email = $('#fEmail').value.trim();
+  const qty = parseFloat($('#fQty').value);
+  const terms = $('#fTerms').checked;
+  let ok = true;
+
+  if (name.length < 2) { $('#eName').textContent = 'Please enter your full name.'; ok = false; }
+  if (!/^\S+@\S+\.\S+$/.test(email)) { $('#eEmail').textContent = 'Please enter a valid email address.'; ok = false; }
+  if (!qty || qty <= 0) { $('#eQty').textContent = 'Quantity must be greater than zero.'; ok = false; }
+  else if (qty > p.stock) { $('#eQty').textContent = 'Only ' + p.stock + ' ' + p.unit + ' available.'; ok = false; }
+  if (!terms) { $('#eTerms').textContent = 'Please accept the trading terms to proceed.'; ok = false; }
+
+  if (!ok) return;
+
+  const btn = $('#fSubmit');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+
+  setTimeout(() => {
+    const ref = 'REQ-' + Math.random().toString(36).slice(2, 7).toUpperCase();
+    const del = $('#fDel').value;
+
+    $('#sRef').textContent = ref;
+    $('#sSummary').innerHTML =
+      '<div><span>Product</span><b>' + p.name + '</b></div>' +
+      '<div><span>Quantity</span><b>' + qty.toLocaleString('en-US') + ' ' + p.unit + '</b></div>' +
+      '<div><span>Indicative value</span><b>$' + fmt(Math.round(p.price * qty)) + '</b></div>' +
+      '<div><span>Delivery terms</span><b>' + del.split(' — ')[0] + '</b></div>' +
+      '<div><span>Requested by</span><b>' + name + '</b></div>';
+
+    $('#detailView').style.display = 'none';
+    $('#successView').hidden = false;
+
+    requests++;
+    $('#reqCount').textContent = requests;
+    $('#logEmpty').style.display = 'none';
+
+    const li = document.createElement('li');
+    li.className = 'log-item';
+    const time = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    li.innerHTML = '<span class="ref">' + ref + '</span>'
+      + '<span class="what">' + qty.toLocaleString('en-US') + ' ' + p.unit + ' · ' + p.name + '</span>'
+      + '<span class="meta">' + name + ' · ' + time + '</span>'
+      + '<span class="pill">Received</span>';
+    $('#logList').prepend(li);
+
+    try {
+      window.sendPrompt && window.sendPrompt(
+        'I submitted a quote request via the Commodities page: ' +
+        qty.toLocaleString('en-US') + ' ' + p.unit + ' of ' + p.name + ', reference ' + ref + '.'
+      );
+    } catch (_) {}
+  }, 900);
+});
+
+$('#sDone').addEventListener('click', closeModal);
+
+$('#sAgain').addEventListener('click', () => {
+  $('#successView').hidden = true;
+  $('#detailView').style.display = '';
+  $('#fQty').value = '';
+  $('#fNotes').value = '';
+  const b = $('#fSubmit');
+  b.disabled = false;
+  b.textContent = 'Submit request';
+  setTimeout(() => $('#fQty').focus(), 200);
+});
+
+/* ---- YEAR ---- */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
