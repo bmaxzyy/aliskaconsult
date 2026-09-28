@@ -34,7 +34,7 @@ $message .= "Quantity: $qty MT\n";
 $message .= "Delivery Terms: $delivery\n\n";
 $message .= "Notes:\n$notes\n";
 
-$headers  = "From: Website <no-reply@aliskaconsult.com>\r\n";
+$headers  = "From: Aliska Website <no-reply@aliskaconsult.com>\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 

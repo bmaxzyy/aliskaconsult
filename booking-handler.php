@@ -1,70 +1,114 @@
 <?php
 /**
- * Handles submissions from the Book A Session page (book-a-session.html).
- * Expects POST fields: first_name, last_name, email, interest, location, notes, website (honeypot).
+ * Aliska Booking Form Handler
+ * ----------------------------
+ * Receives POST data from the booking form, validates it,
+ * sends an email, and returns a JSON response.
  */
 
-declare(strict_types=1);
-require __DIR__ . '/config.php';
+// ── Config ──
+$recipient_email = "abdulmalikabubakar273@gmail.com";
+$site_name       = "Aliska Business Advisory and Research";
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    json_response(false, 'Invalid request method.', 405);
+// Only allow POST requests
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    echo json_encode(["success" => false, "message" => "Invalid request method."]);
+    exit;
 }
 
-reject_if_spam();
+header("Content-Type: application/json");
 
-$firstName = clean_input($_POST['first_name'] ?? '');
-$lastName  = clean_input($_POST['last_name'] ?? '');
-$email     = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-$interest  = clean_input($_POST['interest'] ?? '');
-$location  = clean_input($_POST['location'] ?? '');
-$notes     = clean_input($_POST['notes'] ?? '');
+// ── Collect & sanitize input ──
+$first_name = trim(filter_input(INPUT_POST, "first_name", FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? "");
+$last_name  = trim(filter_input(INPUT_POST, "last_name",  FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? "");
+$email      = trim(filter_input(INPUT_POST, "email",      FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? "");
+$interest   = trim(filter_input(INPUT_POST, "interest",   FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? "");
+$location   = trim(filter_input(INPUT_POST, "location",   FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? "");
+$notes      = trim(filter_input(INPUT_POST, "notes",      FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? "");
 
-$allowedInterests = [
-    'Financial Advisory',
-    'Business Management',
-    'Human Resource Advisory',
-    'IT Advisory',
-    'Corporate Strategy Consulting',
-];
-$allowedLocations = ['Onsite', 'Remote'];
+// Honeypot field (optional spam trap — add a hidden input named "website" to your form)
+$honeypot = trim($_POST["website"] ?? "");
+if (!empty($honeypot)) {
+    // Silently pretend success to bots
+    echo json_encode(["success" => true, "message" => "Session booked."]);
+    exit;
+}
 
+// ── Validation ──
 $errors = [];
-if ($firstName === '' || $lastName === '') {
-    $errors[] = 'First and last name are required.';
-}
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'A valid email address is required.';
-}
-if (!in_array($interest, $allowedInterests, true)) {
-    $errors[] = 'Please select a valid area of interest.';
-}
-if (!in_array($location, $allowedLocations, true)) {
-    $errors[] = 'Please select whether you need onsite or remote assistance.';
+
+if (empty($first_name) || strlen($first_name) < 2) {
+    $errors["first_name"] = "Please enter your first name.";
 }
 
-if ($errors) {
-    json_response(false, implode(' ', $errors), 422);
+if (empty($last_name) || strlen($last_name) < 2) {
+    $errors["last_name"] = "Please enter your last name.";
 }
 
-$emailBody = "New session booking from the " . SITE_NAME . " website\n\n"
-    . "Name: {$firstName} {$lastName}\n"
-    . "Email: {$email}\n"
-    . "Area of interest: {$interest}\n"
-    . "Onsite or remote: {$location}\n\n"
-    . "Additional info:\n" . ($notes !== '' ? $notes : 'None provided') . "\n";
+if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors["email"] = "Please enter a valid email address.";
+}
 
-$headers = [
-    'From: ' . SITE_NAME . ' Website <' . FROM_EMAIL . '>',
-    'Reply-To: ' . $email,
-    'Content-Type: text/plain; charset=UTF-8',
+$allowed_interests = [
+    "Financial Advisory",
+    "Business Management",
+    "Human Resource Advisory",
+    "IT Advisory",
+    "Corporate Strategy Consulting",
 ];
+if (empty($interest) || !in_array($interest, $allowed_interests, true)) {
+    $errors["interest"] = "Please select an area of interest.";
+}
 
-$sent = @mail(RECIPIENT_EMAIL, '[Website] New Session Booking — ' . $interest, $emailBody, implode("\r\n", $headers));
+if (empty($location) || !in_array($location, ["Onsite", "Remote"], true)) {
+    $errors["location"] = "Please select onsite or remote.";
+}
+
+if (!empty($errors)) {
+    http_response_code(422);
+    echo json_encode([
+        "success" => false,
+        "message" => "Please fix the errors below.",
+        "errors"  => $errors
+    ]);
+    exit;
+}
+
+$full_name = $first_name . " " . $last_name;
+
+// ── Build email ──
+$email_subject = "[$site_name Booking] New session request — $interest";
+
+$email_body = "You have a new booking request from your website.\n\n";
+$email_body .= "Name:            $full_name\n";
+$email_body .= "Email:           $email\n";
+$email_body .= "Area of interest: $interest\n";
+$email_body .= "Onsite/Remote:   $location\n";
+$email_body .= "Additional info: " . (!empty($notes) ? $notes : "—") . "\n";
+$email_body .= "\n---\nSent: " . date("Y-m-d H:i:s") . "\n";
+$email_body .= "IP: " . ($_SERVER["REMOTE_ADDR"] ?? "unknown") . "\n";
+
+// Headers
+$headers   = [];
+$headers[] = "MIME-Version: 1.0";
+$headers[] = "Content-type: text/plain; charset=UTF-8";
+$headers[] = "From: $site_name Website <noreply@" . ($_SERVER["HTTP_HOST"] ?? "aliskaconsult.com") . ">";
+$headers[] = "Reply-To: $full_name <$email>";
+$headers[] = "X-Mailer: PHP/" . phpversion();
+
+// ── Send ──
+$sent = mail($recipient_email, $email_subject, $email_body, implode("\r\n", $headers));
 
 if ($sent) {
-    json_response(true, 'Thank you, ' . $firstName . ' — your session request has been received. We will confirm shortly by email.');
+    echo json_encode([
+        "success" => true,
+        "message" => "Thank you, $first_name! Your session request has been sent. We'll get back to you soon."
+    ]);
+} else {
+    http_response_code(500);
+    echo json_encode([
+        "success" => false,
+        "message" => "Sorry, something went wrong on our end. Please try again or email us directly."
+    ]);
 }
-
-error_log('Aliska booking form: mail() failed for ' . $email);
-json_response(false, 'We could not submit your booking right now. Please call us on (+233) 302 907 260 or try again later.', 500);
