@@ -65,7 +65,7 @@ $html_body = <<<HTML
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:8px;overflow:hidden;">
           <tr>
             <td style="background:#0f2a4a;color:#ffffff;padding:20px 28px;font-size:18px;font-weight:bold;">
-              Aliska Business Advisory and Research
+              Aliska Business Advisory and Research | Commodities
             </td>
           </tr>
           <tr>
@@ -103,13 +103,14 @@ $html_body = <<<HTML
           </tr>
           <tr>
             <td style="background:#0f2a4a;color:#ffffff;padding:14px 28px;font-size:12px;">
-              This is an automated notification from your website quote form.
+              <span>&copy; <span id="year"></span> All rights reserved.</span>
             </td>
           </tr>
         </table>
       </td>
     </tr>
   </table>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 HTML;

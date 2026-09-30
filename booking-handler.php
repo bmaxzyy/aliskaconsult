@@ -115,13 +115,14 @@ $html_body = <<<HTML
           </tr>
           <tr>
             <td style="background:#0f2a4a;color:#ffffff;padding:14px 28px;font-size:12px;">
-              This is an automated notification from your website booking form.
+              <span>&copy; <span id="year"></span> All rights reserved.</span>
             </td>
           </tr>
         </table>
       </td>
     </tr>
   </table>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 HTML;

@@ -97,7 +97,7 @@ $html_body .= <<<HTML
           </tr>
           <tr>
             <td style="background:#0f2a4a;color:#ffffff;padding:14px 28px;font-size:12px;">
-              <span>&copy; <span id="year"></span> Aliska Business Advisory and Research. All rights reserved.</span>
+              <span>&copy; <span id="year"></span> All rights reserved.</span>
             </td>
           </tr>
         </table>
