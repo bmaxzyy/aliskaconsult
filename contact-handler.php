@@ -97,7 +97,7 @@ $html_body .= <<<HTML
           </tr>
           <tr>
             <td style="background:#0f2a4a;color:#ffffff;padding:14px 28px;font-size:12px;">
-              <span>&copy; <span id="year"></span> All rights reserved.</span>
+              <span>&copy; {$e(date('Y'))} All rights reserved.</span>
             </td>
           </tr>
         </table>
@@ -112,7 +112,7 @@ HTML;
 
 $boundary = md5(uniqid(time(), true));
 
-$headers  = "From: Aliska Website <no-reply@aliskaconsult.com>\r\n";
+$headers  = "From: Aliska Consult <no-reply@aliskaconsult.com>\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: multipart/alternative; boundary=\"$boundary\"\r\n";

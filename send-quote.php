@@ -117,7 +117,7 @@ HTML;
 
 $boundary = md5(uniqid(time(), true));
 
-$headers  = "From: Aliska Website <no-reply@aliskaconsult.com>\r\n";
+$headers  = "From: Aliska Consult <no-reply@aliskaconsult.com>\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: multipart/alternative; boundary=\"$boundary\"\r\n";
