@@ -22,7 +22,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit('Invalid email address.');
 }
 
-$to      = 'abdulmalikabubakar273@gmail.com';
+$to      = 'products@aliskaconsult.com';
 $subject = 'New Quote Request - ' . $product;
 
 // Plain-text fallback (for clients that don't render HTML)

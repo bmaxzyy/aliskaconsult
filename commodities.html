@@ -24,24 +24,41 @@
   </div>
 </div>
 
+<!-- Header -->
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">
       <img src="images/logo-123.png" class="logo-light" alt="Aliska Consult">
       <img src="images/logo-white.png" class="logo-dark" alt="Aliska Consult">
     </a>
+
     <div class="nav-backdrop"></div>
     <nav class="main-nav" aria-label="Primary">
       <ul class="main-nav__list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="our-services.html">Our Services</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="commodities.html" aria-current="page">Commodities</a></li>
+        <li class="has-sub">
+          <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-insights">About <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="nav-sub" id="nav-insights">
+            <li><a href="about.html">Overview</a></li>
+            <li><a href="about.html#approach">Our Approach</a></li>
+            <li><a href="about.html#shared-value">Shared Value</a></li>
+          </ul>
+        </li>
+        <li><a href="our-services.html">What We Do</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li class="has-sub">
+          <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-insights">Insights <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="nav-sub" id="nav-insights">
+            <li><a href="news.html">News</a></li>
+            <li><a href="commodities.html" aria-current="page">Market Research</a></li>
+          </ul>
+        </li>
+        <li><a href="work-with-us.html">Work With Us</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="book-a-session.html" class="btn btn-primary">Book A Session</a></li>
         <li><a href="https://emptyroom.aliskaconsult.com">The Empty Room</a></li>
       </ul>
     </nav>
+
     <div class="header-actions">
       <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
         <span class="icon-sun" aria-hidden="true">☀</span>
@@ -53,7 +70,6 @@
     </div>
   </div>
 </header>
-
 <main id="main">
 <div class="pg" id="top">
 
@@ -61,8 +77,8 @@
     <h1>From fertile soil<br>to <span>global markets</span>.</h1>
     <p>Traceable bulk supply of natural produce — sourced directly from farmer cooperatives, delivered to your port.</p>
     <div class="hero-btns">
-      <a class="btn-gold" href="#products">Browse products</a>
       <a class="btn-outline-gold" href="#about">Our story</a>
+      <a class="btn-gold" href="#products">Browse products</a>
     </div>
     <div class="trust"><span>ISO 22000 certified</span><span>14 origin countries</span><span>Est. 2011</span></div>
   </header>
@@ -164,26 +180,15 @@
 </div>
 </main>
 
+<!-- Footer -->
 <footer class="site-footer ftr">
-  <!-- <div class="ftr__cta">
-    <div class="container ftr__cta-inner">
-      <div>
-        <span class="eyebrow">Let's work together</span>
-        <h2>Ready to grow with confidence?</h2>
-      </div>
-      <div class="ftr__cta-actions">
-        <a href="book-a-session.html" class="btn btn-primary">Book a session</a>
-        <a href="contact.html" class="btn btn-outline">Contact us</a>
-      </div>
-    </div>
-  </div> -->
 
   <div class="ftr__main container">
     <div class="ftr__brand">
       <a href="index.html">
         <span class="logo"><img src="images/logo-white.png" alt=""></span>
       </a>
-      <p>We are best known for quality work. We work with individuals, start-ups, large and midsize businesses, multi-national corporations, government agencies and non-profit organisations.</p>
+      <p>Aliska is an indigenous Ghanaian strategy and research firm, founded in 2011 and based in East Legon, Accra. We are best known for quality work.</p>
       <div class="ftr__social">
         <a href="https://twitter.com/aliska_consult" aria-label="Aliska on Twitter" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
@@ -198,17 +203,14 @@
     </div>
 
     <div class="ftr__col">
-      <h4>Our Services</h4>
-      <ul>
-        <li><a href="our-services.html">Financial Advisory</a></li>
-        <li><a href="our-services.html">Business Management</a></li>
-        <li><a href="our-services.html">Human Resource Advisory</a></li>
-        <li><a href="our-services.html">IT Advisory</a></li>
-        <li><a href="our-services.html">Corporate Strategy Consulting</a></li>
-        <li><a href="our-services.html">Accounting &amp; Tax Advisory</a></li>
-        <li><a href="our-services.html">Project Management</a></li>
-        <li><a href="commodities.html">Commodities Trading</a></li>
-      </ul>
+      <h4>What We Do</h4>
+        <ul>
+          <li><a href="our-services.html#research">Research &amp; Insight</a></li>
+          <li><a href="our-services.html#policy">Policy &amp; National Development</a></li>
+          <li><a href="our-services.html#digital">Digital Transformation Products</a></li>
+          <li><a href="our-services.html#advisory">Business &amp; Financial Advisory</a></li>
+          <li><a href="commodities.html">Market Research</a></li>
+        </ul>
     </div>
 
     <div class="ftr__col">
@@ -242,7 +244,14 @@
 
   <div class="ftr__bottom container">
     <span>&copy; <span id="year"></span> Aliska Business Advisory and Research. All rights reserved.</span>
-    <a href="#page-top" class="ftr__back-top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    <div>
+      <div class="footer-bottom__legal">
+        <a class="footer-empty" href="https://emptyroom.aliskaconsult.com" target="_blank" rel="noopener">The Empty Room &#8599;</a>
+        <a class="footer-empty" href="privacy-policy.html">Privacy policy</a>
+        <!-- <button class="footer-legal-link footer-empty cookie-settings" type="button">Cookie settings</button> -->
+        <a href="#page-top" class="ftr__back-top">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
   </div>
 </footer>
 

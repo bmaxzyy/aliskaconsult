@@ -33,13 +33,27 @@
     <div class="nav-backdrop"></div>
     <nav class="main-nav" aria-label="Primary">
       <ul class="main-nav__list">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="our-services.html">Our Services</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="commodities.html">Commodities</a></li>
+        <li class="has-sub">
+          <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-insights">About <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="nav-sub" id="nav-insights">
+            <li><a href="about.html">Overview</a></li>
+            <li><a href="about.html#approach">Our Approach</a></li>
+            <li><a href="about.html#shared-value">Shared Value</a></li>
+          </ul>
+        </li>
+        <li><a href="our-services.html">What We Do</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li class="has-sub">
+          <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-insights">Insights <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="nav-sub" id="nav-insights">
+            <li><a href="news.html">News</a></li>
+            <li><a href="commodities.html">Market Research</a></li>
+          </ul>
+        </li>
+        <li><a href="work-with-us.html">Work With Us</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="book-a-session.html" class="btn btn-primary">Book A Session</a></li>
-        <li><a href="https://emptyroom.aliskaconsult.com" target="_blank" rel="noopener">The Empty Room</a></li>
+        <li><a href="https://emptyroom.aliskaconsult.com">The Empty Room</a></li>
       </ul>
     </nav>
 
@@ -61,12 +75,12 @@
   <section class="hero">
     <div class="container">
       <div class="hero__copy">
-        <span class="hero__eyebrow">Advisory Firm · Accra, Ghana</span>
-        <h1>We help you build <span class="accent">customer intimacy</span> that lasts.</h1>
-        <p>Our comprehensive studies help clients increase their understanding of how to influence customers to buy their products, sell effectively, and build lasting marketing strategies.</p>
+        <span class="hero__eyebrow">Strategy and Research · Accra, Ghana · Since 2011</span>
+        <h1>Research that builds <span class="accent">nations.</span></h1>
+        <p>We turn evidence into policies, development agendas and digital products that reduce poverty and build sustainable growth for Ghana and Africa.</p>
         <div class="hero__cta">
-          <a href="book-a-session.html" class="btn btn-primary">Book an appointment</a>
-          <a href="our-services.html" class="btn btn-outline">Explore our services</a>
+          <a href="book-a-session.html" class="btn btn-primary">Book a session</a>
+          <a href="our-services.html" class="btn btn-outline">See what we do</a>
         </div>
         <!-- <ul class="hero__stats">
           <li><strong>2016</strong><span>Advising Ghanaian businesses since</span></li>
@@ -81,10 +95,10 @@
         <div class="hero__media-float">
           <img src="images/hero-dinner-BBwN2eTR.jpg" alt="Aliska advisory team in discussion">
         </div>
-        <div class="hero__quote-card">
+        <!-- <div class="hero__quote-card">
           <p>&ldquo;Aliska helped me visualize my aspirations.&rdquo;</p>
           <cite>— Kami, Kami Farms</cite>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -94,30 +108,30 @@
     <div class="container">
       <div class="section-head section-head--center">
         <span class="eyebrow">What we do</span>
-        <h2>Our Services</h2>
+        <h2>Three Practices</h2>
         <p>Each project gives us the opportunity to transform the client's mindset as well as our own, thereby shaping agendas and enabling meaningful, enduring impact.</p>
       </div>
       <div class="services-grid">
         <article class="service-card">
           <div class="service-card__num">01</div>
-          <h3>Business Management</h3>
-          <p>Let us help you structure your business and improve your processes.</p>
+          <h3>Research and Insight</h3>
+          <p>Rigorous studies, surveys and data analysis that show what is happening and why.</p>
         </article>
         <article class="service-card">
           <div class="service-card__num">02</div>
-          <h3>Financial Advisory</h3>
-          <p>Whether it's Corporate Finance or Risk Management, our team is ready to assist you.</p>
+          <h3>Policy and National Development</h3>
+          <p>Evidence-based policies, strategies and programmes for government, regulators and development partners.</p>
         </article>
         <article class="service-card">
           <div class="service-card__num">03</div>
-          <h3>IT Advisory</h3>
-          <p>Our professional IT advice keeps you up with the ever-changing world of technology.</p>
+          <h3>Digital Transformation Products</h3>
+          <p>Technology that puts good policy into people's hands, such as Sikaflow for small businesses.</p>
         </article>
-        <article class="service-card">
+        <!-- <article class="service-card">
           <div class="service-card__num">04</div>
           <h3>MSMEs Development and Sustainability</h3>
           <p>We are dedicated to the provision of effective HR solutions for your business.</p>
-        </article>
+        </article> -->
       </div>
     </div>
   </section>
@@ -136,8 +150,8 @@
         <div>
           <span class="eyebrow">Who we are</span>
           <h2>Advisory Firm</h2>
-          <p>Aliska has made a steady impact in the world of business by assisting our clients achieve their short-term and long-term objectives. We pride ourselves on our business expertise, which has many benefits for you, your business, and your stakeholders.</p>
-          <a href="our-services.html" class="btn btn-ghost">Learn more about us</a>
+          <p>Aliska Business Advisory and Research is an indigenous Ghanaian strategy and research firm, founded in 2011 and based in East Legon, Accra. We work with governments, regulators, development partners, businesses and communities to answer one question: what will actually reduce poverty and build lasting prosperity here?</p>
+          <a href="about.html" class="btn btn-ghost">Learn more about us</a>
         </div>
       </div>
     </div>
@@ -231,6 +245,8 @@
     </div>
   </section> -->
 
+    
+  
   <!-- MD profile -->
   <section class="section section--navy">
     <div class="container">
@@ -261,29 +277,26 @@
     </div>
   </section>
 
+  <section class="section section--navy" style="text-align:center;">
+    <div class="container">
+      <!-- <span class="eyebrow">Ready to start?</span> -->
+      <h2>Ready to turn evidence into impact?</h2>
+      <p style="max-width:520px;margin:0 auto 28px;">Tell us the challenge. We will bring the research, the strategy and the tools.</p>
+      <a href="book-a-session.html" class="btn btn-primary">Book a session</a>
+    </div>
+  </section>
+
 </main>
 
 <!-- Footer -->
 <footer class="site-footer ftr">
-  <div class="ftr__cta">
-    <div class="container ftr__cta-inner">
-      <div>
-        <span class="eyebrow">Let's work together</span>
-        <h2>Ready to grow with confidence?</h2>
-      </div>
-      <div class="ftr__cta-actions">
-        <a href="book-a-session.html" class="btn btn-primary">Book a session</a>
-        <a href="contact.html" class="btn btn-outline">Contact us</a>
-      </div>
-    </div>
-  </div>
 
   <div class="ftr__main container">
     <div class="ftr__brand">
       <a href="index.html">
         <span class="logo"><img src="images/logo-white.png" alt=""></span>
       </a>
-      <p>We are best known for quality work. We work with individuals, start-ups, large and midsize businesses, multi-national corporations, government agencies and non-profit organisations.</p>
+      <p>Aliska is an indigenous Ghanaian strategy and research firm, founded in 2011 and based in East Legon, Accra. We are best known for quality work.</p>
       <div class="ftr__social">
         <a href="https://twitter.com/aliska_consult" aria-label="Aliska on Twitter" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
@@ -298,16 +311,14 @@
     </div>
 
     <div class="ftr__col">
-      <h4>Our Services</h4>
-      <ul>
-        <li><a href="our-services.html">Financial Advisory</a></li>
-        <li><a href="our-services.html">Business Management</a></li>
-        <li><a href="our-services.html">MSMEs Development and Sustainability</a></li>
-        <li><a href="our-services.html">IT Advisory</a></li>
-        <li><a href="our-services.html">Corporate Strategy Consulting</a></li>
-        <li><a href="our-services.html">Accounting &amp; Tax Advisory</a></li>
-        <li><a href="our-services.html">Project Management</a></li>
-      </ul>
+      <h4>What We Do</h4>
+        <ul>
+          <li><a href="our-services.html#research">Research &amp; Insight</a></li>
+          <li><a href="our-services.html#policy">Policy &amp; National Development</a></li>
+          <li><a href="our-services.html#digital">Digital Transformation Products</a></li>
+          <li><a href="our-services.html#advisory">Business &amp; Financial Advisory</a></li>
+          <li><a href="commodities.html">Market Research</a></li>
+        </ul>
     </div>
 
     <div class="ftr__col">
@@ -341,7 +352,14 @@
 
   <div class="ftr__bottom container">
     <span>&copy; <span id="year"></span> Aliska Business Advisory and Research. All rights reserved.</span>
-    <a href="#page-top" class="ftr__back-top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    <div>
+      <div class="footer-bottom__legal">
+        <a class="footer-empty" href="https://emptyroom.aliskaconsult.com" target="_blank" rel="noopener">The Empty Room &#8599;</a>
+        <a class="footer-empty" href="privacy-policy.html">Privacy policy</a>
+        <!-- <button class="footer-legal-link footer-empty cookie-settings" type="button">Cookie settings</button> -->
+        <a href="#page-top" class="ftr__back-top">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
   </div>
 </footer>
 

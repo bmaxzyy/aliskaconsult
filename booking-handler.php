@@ -41,7 +41,7 @@ if (!in_array($location, ['Onsite', 'Remote'], true)) {
 
 $full_name = $first_name . ' ' . $last_name;
 
-$to      = 'abdulmalikabubakar273@gmail.com';
+$to      = 'sessions@aliskaconsult.com';
 $subject = 'New Session Booking - ' . $interest;
 
 // Plain-text fallback

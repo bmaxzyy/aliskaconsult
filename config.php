@@ -5,7 +5,7 @@
  * these from environment variables rather than committing them to source.
  */
 
-define('RECIPIENT_EMAIL', 'abdulmalikabubakar273@gmail.com');
+define('RECIPIENT_EMAIL', 'hello@aliskaconsult.com');
 define('SITE_NAME', 'Aliska Business Advisory and Research');
 define('FROM_EMAIL', 'no-reply@aliskaconsult.com');
 

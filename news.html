@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News | Aliska Business Advisory and Research</title>
-<meta name="description" content="Insights and opinion from Aliska Business Advisory and Research on management consulting, telecoms, economic development, and finance.">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | Aliska Business Advisory and Research</title>
+  <meta name="description" content="News and announcements from Aliska Business Advisory and Research: the Trident Aliska Digital Tech joint venture, Sikaflow launches, and digital transformation in Ghana.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/news-patch.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -21,24 +23,41 @@
   </div>
 </div>
 
+<!-- Header -->
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">
       <img src="images/logo-123.png" class="logo-light" alt="Aliska Consult">
       <img src="images/logo-white.png" class="logo-dark" alt="Aliska Consult">
     </a>
+
     <div class="nav-backdrop"></div>
     <nav class="main-nav" aria-label="Primary">
       <ul class="main-nav__list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="our-services.html">Our Services</a></li>
-        <li><a href="news.html" aria-current="page">News</a></li>
-        <li><a href="commodities.html">Commodities</a></li>
+        <li class="has-sub">
+          <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-insights">About <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="nav-sub" id="nav-insights">
+            <li><a href="about.html">Overview</a></li>
+            <li><a href="about.html#approach">Our Approach</a></li>
+            <li><a href="about.html#shared-value">Shared Value</a></li>
+          </ul>
+        </li>
+        <li><a href="our-services.html">What We Do</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li class="has-sub">
+          <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-insights">Insights <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="nav-sub" id="nav-insights">
+            <li><a href="news.html" aria-current="page">News</a></li>
+            <li><a href="commodities.html">Market Research</a></li>
+          </ul>
+        </li>
+        <li><a href="work-with-us.html">Work With Us</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="book-a-session.html" class="btn btn-primary">Book A Session</a></li>
-        <li><a href="https://emptyroom.aliskaconsult.com" target="_blank" rel="noopener">The Empty Room</a></li>
+        <li><a href="https://emptyroom.aliskaconsult.com">The Empty Room</a></li>
       </ul>
     </nav>
+
     <div class="header-actions">
       <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
         <span class="icon-sun" aria-hidden="true">☀</span>
@@ -53,160 +72,351 @@
 
 <main id="main">
 
-  <div class="page-header">
+  <div class="page-header news-hero">
     <div class="container">
-      <h1>News</h1>
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a><span class="sep">›</span><span class="current">News</span>
-      </nav>
+      <span class="eyebrow">Latest News</span>
+      <h1>Stories from the <span style="color:var(--gold-400);">frontline of inclusive growth</span></h1>
     </div>
   </div>
 
   <section class="section section--surface">
     <div class="container">
-      <div class="news-layout">
 
-        <div class="news-list">
-
-          <article class="post-card">
-            <div class="post-card__img">
-              <img src="https://aliskaconsult.com/wp-content/uploads/2021/10/pexels-pixabay-356079.jpg" alt="">
-            </div>
-            <div class="post-card__body">
-              <div class="post-meta">
-                <span class="category">Opinion</span>
-                <span>October 26, 2021</span>
-                <span>0 Comments</span>
-              </div>
-              <h2><a href="#post-management-consultants">How Management Consultants can merge expectations &amp; manage resistance with clients: Best Practices</a></h2>
-              <p>Generally, the main obligations of management consultants to their clients are to assist the client to solve management or operational issues, create value for its customers and stakeholders, reach new…</p>
-              <a class="read-more" href="#post-management-consultants">Continue Reading →</a>
-            </div>
-          </article>
-
-          <article class="post-card">
-            <div class="post-card__img">
-              <img src="https://aliskaconsult.com/wp-content/uploads/2016/10/pexels-pixabay-159304.jpg" alt="">
-            </div>
-            <div class="post-card__body">
-              <div class="post-meta">
-                <span class="category">Business / Opinion</span>
-                <span>April 13, 2021</span>
-                <span>0 Comments</span>
-              </div>
-              <h2><a href="#post-telecos">Perfect competitive market in telecos is an illusion</a></h2>
-              <p>With Emmanuel Smend. In June 2020, Communication Minister Ursula Owusu argued that the telecommunication industry in Ghana is a typical monopolistic competitive market. She further argued that the ministry is putting…</p>
-              <a class="read-more" href="#post-telecos">Continue Reading →</a>
-            </div>
-          </article>
-
-          <article class="post-card">
-            <div class="post-card__img">
-              <img src="https://aliskaconsult.com/wp-content/uploads/2021/11/pexels-cdc-3992933.jpg" alt="">
-            </div>
-            <div class="post-card__body">
-              <div class="post-meta">
-                <span class="category">Business</span>
-                <span>September 17, 2020</span>
-                <span>0 Comments</span>
-              </div>
-              <h2><a href="#post-covid">How COVID-19 exposed serious financial challenges in many countries</a></h2>
-              <p>There is no doubt that the novel Coronavirus has had an effect on international financial management. As soon as the World Health Organisation identified the virus as a global pandemic, central…</p>
-              <a class="read-more" href="#post-covid">Continue Reading →</a>
-            </div>
-          </article>
-
-          <article class="post-card">
-            <div class="post-card__img">
-              <img src="https://aliskaconsult.com/wp-content/uploads/2016/10/pexels-pixabay-210574.jpg" alt="">
-            </div>
-            <div class="post-card__body">
-              <div class="post-meta">
-                <span class="category">Economy</span>
-                <span>April 3, 2018</span>
-                <span>0 Comments</span>
-              </div>
-              <h2><a href="#post-africa">Comparative economic concerns that are prudent in the development of Africa</a></h2>
-              <p>African corporations need to step up their performance to explore most of the continent's economic opportunities. No African-owned company is in the Fortune 500 yet. To progress, firms should consider…</p>
-              <a class="read-more" href="#post-africa">Continue Reading →</a>
-            </div>
-          </article>
-
-          <article class="post-card">
-            <div class="post-card__img">
-              <img src="https://aliskaconsult.com/wp-content/uploads/2016/10/pexels-iconcom-479358.jpg" alt="">
-            </div>
-            <div class="post-card__body">
-              <div class="post-meta">
-                <span class="category">Opinion</span>
-                <span>October 25, 2016</span>
-                <span>0 Comments</span>
-              </div>
-              <h2><a href="#post-facebook-tax">Why Facebook should pay tax in Ghana</a></h2>
-              <p>Facebook is a social network that allows individuals to easily keep in touch with their friends and families, and corporations to keep in touch with their clients. However, Facebook's objective…</p>
-              <a class="read-more" href="#post-facebook-tax">Continue Reading →</a>
-            </div>
-          </article>
-
-          <nav class="pagination" aria-label="Blog pagination">
-            <span class="is-current">1</span>
-            <a href="#" aria-label="Page 2">2</a>
-            <a href="#" aria-label="Next page">›</a>
-          </nav>
-
+      <article class="news-featured">
+        <div class="news-featured__img"><img src="https://tridentaliska.com/images/news/new1.jpg"
+            alt="Sikaflow goes nationwide across Ghana"></div>
+        <div class="news-featured__body">
+          <span class="news-tag">Product Launch — Sikaflow</span>
+          <h2>Sikaflow Goes Nationwide: Ghana's All-in-One Business Platform for MSMEs Now Live</h2>
+          <div class="news-meta"><time>15 July 2026</time><span>4 min read</span></div>
+          <p>Sikaflow, the business management platform built by Trident Aliska, is now live nationwide as a free
+            Android app and on POS terminals across all sixteen regions — bringing bookkeeping, payments, and credit
+            access to MSMEs in one place.</p>
+          <a class="btn btn-primary"
+            href="https://www.graphic.com.gh/adverts/sikaflow-goes-nationwide-ghanas-all-in-one-business-management-platform-for-msmes-now-live-on-android-and-pos-terminals.html"
+            data-modal="modal-sikaflow-nationwide">Read Article</a>
         </div>
+      </article>
 
-        <aside>
-          <div class="sidebar-block">
-            <h3>Search</h3>
-            <label class="sr-only" for="blog-search">Search this website</label>
-            <input class="search-input" type="search" id="blog-search" placeholder="Search this website">
+      <h2 class="news-section-title">Latest Intelligence</h2>
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-card__img"><img src="https://tridentaliska.com/images/news/newsbackground.jpg" alt=""
+              loading="lazy"></div>
+          <div class="news-card__body">
+            <span class="news-tag">Joint Venture Launch</span>
+            <div class="news-meta"><time>31 July 2026</time></div>
+            <h3><a
+                href="https://www.graphic.com.gh/adverts/trident-digital-tech-holdings-and-aliska-business-advisory-launch-joint-venture-to-accelerate-ghanas-digital-transformation.html"
+                data-modal="modal-jv-launch">Trident Digital Tech Holdings and Aliska Business Advisory launch joint
+                venture to accelerate Ghana's Digital Transformation</a></h3>
+            <p>Trident Aliska Digital Tech Ghana Ltd. to serve as operating vehicle for nationwide Digital Economy
+              Initiatives, anchored by Aliska's Deep Global and Local Expertise.</p>
+            <a class="news-card__more" href="#" data-modal="modal-jv-launch">Read preview →</a>
+            <div class="news-card__foot"><strong>Graphic Online</strong><span>5 min</span></div>
           </div>
+        </article>
 
-          <div class="sidebar-block">
-            <h3>Recent Posts</h3>
-            <ul class="sidebar-list">
-              <li><a href="#post-management-consultants">How Management Consultants can merge expectations &amp; manage resistance with clients</a></li>
-              <li><a href="#post-telecos">Perfect competitive market in telecos is an illusion</a></li>
-              <li><a href="#post-covid">How COVID-19 exposed serious financial challenges in many countries</a></li>
-              <li><a href="#post-africa">Comparative economic concerns that are prudent in the development of Africa</a></li>
-              <li><a href="#post-facebook-tax">Why Facebook should pay tax in Ghana</a></li>
-            </ul>
+        <article class="news-card">
+          <div class="news-card__img"><img src="https://tridentaliska.com/images/news/nas.jpeg" alt="" loading="lazy">
           </div>
-
-          <div class="sidebar-block">
-            <h3>About Aliska</h3>
-            <p style="font-size:0.9rem;">Aliska Business Advisory and Research is an indigenous advisory firm specialising in financial advisory, research and data analysis, accounting, strategy, technological and administrative support services.</p>
+          <div class="news-card__body">
+            <span class="news-tag">Ripple Strategy Stablecoin Partnership</span>
+            <div class="news-meta"><time>31 July 2026</time></div>
+            <h3><a
+                href="https://www.nasdaq.com/press-release/trident-digital-tech-holdings-and-ripple-strategy-holding-sign-strategic-cooperation"
+                data-modal="modal-ripple">Trident Digital Tech Holdings and Ripple Strategy Holding Sign Strategic
+                Cooperation Agreement to Co-Build a Stablecoin Payment System for Africa Market</a></h3>
+            <p>Trident Aliska Digital Tech Ghana Ltd. to serve as operating vehicle for nationwide Digital Economy
+              Initiatives, anchored by Aliska's Deep Global and Local Expertise</p>
+            <a class="news-card__more" href="#" data-modal="modal-ripple">Read preview →</a>
+            <div class="news-card__foot"><strong>Nasdaq press release</strong><span>5 min</span></div>
           </div>
-        </aside>
+        </article>
 
+        <article class="news-card">
+          <div class="news-card__img"><img src="https://tridentaliska.com/images/news/world-technology.webp" alt=""
+              loading="lazy"></div>
+          <div class="news-card__body">
+            <span class="news-tag">Fintech</span>
+            <div class="news-meta"><time>23 June 2026</time></div>
+            <h3><a
+                href="https://techafricanews.com/2026/06/23/trident-digital-tech-launches-sikaflow-digital-finance-platform-in-ghana/"
+                data-modal="modal-techafrica">Trident Digital Tech Launches Sikaflow Digital Finance Platform in
+                Ghana</a></h3>
+            <p>By combining digital commerce, business management, tax automation, financial record creation and
+              financial services enablement within a unified platform, Sikaflow is designed to help businesses
+              transition from informal economic activity into the formal financial ecosystem.</p>
+            <a class="news-card__more" href="#" data-modal="modal-techafrica">Read preview →</a>
+            <div class="news-card__foot"><strong>TechAfrica News</strong><span>5 min</span></div>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__img"><img src="https://tridentaliska.com/images/news/newsplaceholder.jpeg" alt=""
+              loading="lazy"></div>
+          <div class="news-card__body">
+            <span class="news-tag">Fintech</span>
+            <div class="news-meta"><time>23 June 2026</time></div>
+            <h3><a href="https://au-startups.com/news/sikaflow-ghana-msme-formalization"
+                data-modal="modal-au-startups">Sikaflow's Ghana Launch Confronts MSME Formalization Headwinds</a></h3>
+            <p>Trident Digital Tech Holdings rolls out a comprehensive digital platform in Ghana, aiming to formalize
+              over 2 million MSMEs, but faces a market fraught with existing digital solutions and infrastructure
+              gaps.</p>
+            <a class="news-card__more" href="#" data-modal="modal-au-startups">Read preview →</a>
+            <div class="news-card__foot"><strong>AU-Startups</strong><span>5 min</span></div>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__img"><img src="https://tridentaliska.com/images/news/yahfi.jpeg" alt=""
+              loading="lazy"></div>
+          <div class="news-card__body">
+            <span class="news-tag">Business</span>
+            <div class="news-meta"><time>23 June 2026</time></div>
+            <h3><a
+                href="https://finance.yahoo.com/small-business/articles/trident-digital-tech-launches-sikaflow-123000918.html"
+                data-modal="modal-yahoo">Trident Digital Tech Launches Sikaflow, a Digital Financial Infrastructure
+                Platform Designed to Accelerate Economic Formalization and MSME Growth in Ghana</a></h3>
+            <p>Platform is designed to support more than 2 million Ghanaian MSMEs, a sector representing approximately
+              80% of national employment, while addressing a portion of Africa's estimated $5.2 trillion
+              small-business financing gap</p>
+            <a class="news-card__more" href="#" data-modal="modal-yahoo">Read preview →</a>
+            <div class="news-card__foot"><strong>Yahoo! Finance</strong><span>8 min</span></div>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__img"><img src="https://tridentaliska.com/images/news/NASDAQ-Market-News.png" alt=""
+              loading="lazy"></div>
+          <div class="news-card__body">
+            <span class="news-tag">Joint Venture Establishment</span>
+            <div class="news-meta"><time>13 April 2026</time></div>
+            <h3><a
+                href="https://www.nasdaq.com/press-release/trident-digital-tech-holdings-establishes-joint-venture-drive-ghanas-digital"
+                data-modal="modal-jv-april">Trident Digital Tech Holdings and Aliska Business Advisory launch joint
+                venture to accelerate Ghana's Digital Transformation</a></h3>
+            <p>Joint Venture Entity to Serve as Operating Vehicle for Ghana's Government-Led "Digital Citizen"
+              Public-Private Partnership Program</p>
+            <a class="news-card__more" href="#" data-modal="modal-jv-april">Read preview →</a>
+            <div class="news-card__foot"><strong>Nasdaq press release</strong><span>5 min</span></div>
+          </div>
+        </article>
       </div>
+
     </div>
   </section>
 
 </main>
 
+<dialog class="news-modal" id="modal-sikaflow-nationwide" aria-labelledby="modal-sikaflow-nationwide-title">
+  <button class="news-modal__close" type="button" aria-label="Close" data-close>✕</button>
+  <div class="news-modal__img"><img src="https://tridentaliska.com/images/news/new1.jpg" alt="" loading="lazy"></div>
+  <div class="news-modal__body">
+    <span class="news-tag">Product Launch — Sikaflow</span>
+    <h2 id="modal-sikaflow-nationwide-title">Sikaflow Goes Nationwide: Ghana's All-in-One Business Platform for MSMEs
+      Now Live</h2>
+    <div class="news-meta"><time>15 July 2026</time><span>4 min read</span><span>Source: Graphic Online</span></div>
+    <p>Sikaflow, the business management platform developed by Trident Aliska, launched nationwide as a free Android
+      app and on smart POS terminals shipping to merchants across all sixteen regions. It brings together bookkeeping,
+      invoicing, inventory, sales tracking, expense management, and digital reporting in one platform aimed at
+      traders, workshops, farms, and small offices alike.</p>
+    <p>The platform also supports offline use and USSD access for basic phones, syncing automatically once
+      connectivity returns, and includes an AI assistant offering conversational support in Twi, Ga, Hausa, and Ewe
+      alongside English. Beyond day-to-day operations, Sikaflow generates clean, IFRS-for-MSMEs-compliant records that
+      partner banks can use to turn loan assessments that once took months into a matter of minutes.</p>
+    <p>Trident Aliska CEO Aleem Kumi described the launch as more than a software release: "Sikaflow is more than
+      technology it is an inclusive economic empowerment platform." The launch follows a six-year research programme
+      into the support small and medium enterprises need to grow, and the platform is now available at sikaflow.com.
+    </p>
+    <a class="btn btn-primary"
+      href="https://www.graphic.com.gh/adverts/sikaflow-goes-nationwide-ghanas-all-in-one-business-management-platform-for-msmes-now-live-on-android-and-pos-terminals.html"
+      target="_blank" rel="noopener">Read Full Story on Graphic Online ↗</a>
+  </div>
+</dialog>
+
+<dialog class="news-modal" id="modal-jv-launch" aria-labelledby="modal-jv-launch-title">
+  <button class="news-modal__close" type="button" aria-label="Close" data-close>✕</button>
+  <div class="news-modal__img"><img src="https://tridentaliska.com/images/news/newsbackground.jpg" alt=""
+      loading="lazy"></div>
+  <div class="news-modal__body">
+    <span class="news-tag">Joint Venture Launch</span>
+    <h2 id="modal-jv-launch-title">Trident Digital Tech Holdings and Aliska Business Advisory launch joint venture to
+      accelerate Ghana's Digital Transformation</h2>
+    <div class="news-meta"><time>31 July 2026</time><span>5 min read</span><span>Source: Graphic Online</span></div>
+    <p>Trident Digital Tech Holdings Ltd. (Nasdaq: TDTH), a Singapore-headquartered digital technology company, has
+      entered a 50/50 joint venture with Aliska Business Advisory and Research Limited, a leading Accra-based advisory
+      and research firm. The resulting entity, Trident Aliska Digital Tech Ghana Ltd., will develop and commercialise
+      digital technology solutions for public and private sector clients across Ghana and the wider continent.</p>
+    <p>Under the agreement, Trident Aliska takes the lead on technology development, platform engineering, and
+      technical system management, with an emphasis on sovereign technology, cybersecurity, and data protection. Both
+      partners will jointly oversee system maintenance, AI and machine-learning upgrades, and the operational training
+      needed to support nationwide rollout. The deal leans on Aliska's standing in financial advisory, research and
+      data analytics, accounting, and regulatory compliance, alongside Trident's technology base — including its
+      Tridentity digital identity platform — to serve Ghana's fast-growing digital economy under initiatives like the
+      Digital Ghana Agenda.</p>
+    <p>Trident Aliska CEO and Aliska founder Aleem Kumi framed the venture's purpose plainly: "We do not just build
+      technology; we architect the conditions for African prosperity." Trident's Founder and CEO Soon Huat Lim added
+      that the partnership is designed to unlock synergies between Trident's technology capabilities and Aliska's
+      local expertise, with further details on the venture's initial project pipeline expected in the coming weeks.
+    </p>
+    <a class="btn btn-primary"
+      href="https://www.graphic.com.gh/adverts/trident-digital-tech-holdings-and-aliska-business-advisory-launch-joint-venture-to-accelerate-ghanas-digital-transformation.html"
+      target="_blank" rel="noopener">Read Full Story on Graphic Online ↗</a>
+  </div>
+</dialog>
+
+<dialog class="news-modal" id="modal-ripple" aria-labelledby="modal-ripple-title">
+  <button class="news-modal__close" type="button" aria-label="Close" data-close>✕</button>
+  <div class="news-modal__img"><img src="https://tridentaliska.com/images/news/nas.jpeg" alt="" loading="lazy"></div>
+  <div class="news-modal__body">
+    <span class="news-tag">Ripple Strategy Stablecoin Partnership</span>
+    <h2 id="modal-ripple-title">Trident Digital Tech Holdings and Ripple Strategy Holding Sign Strategic Cooperation
+      Agreement to Co-Build a Stablecoin Payment System for Africa Market</h2>
+    <div class="news-meta"><time>10 April 2026</time><span>5 min read</span><span>Source: Nasdaq press release</span>
+    </div>
+    <p>Ripple Strategy to Provide Ripple USD Technology Support for TDTH Africa Project</p>
+    <p>SINGAPORE, April 10, 2026 (GLOBE NEWSWIRE) -- Trident Digital Tech Holdings Ltd. ("Trident", Nasdaq: TDTH), a
+      Singapore-based leader in digital transformation and Web 3.0 activation, today announced the signing of a
+      strategic cooperation agreement with Ripple Strategy Holding ("Ripple Strategy"). Under this agreement, Ripple
+      Strategy will provide Ripple USD (RLUSD) stablecoin technology and Ripple's blockchain-based payment
+      infrastructure to support TDTH's Africa project, specifically to fulfil Trident Africa Technology Initiatives.
+    </p>
+    <h4>Strategic Background</h4>
+    <h4>Rebuilding Ghana's Payment Infrastructure: A Blockchain Platform Introducing RLUSD Settlement for the MSMEs
+      Economy</h4>
+    <p>A new blockchain infrastructure company TDTH is addressing this gap by introducing a crypto-enabled settlement
+      layer anchored by RLUSD, designed specifically for MSMEs and underbanked markets across Ghana to deploy a
+      blockchain-powered modified tax collection and reporting system. TDTH is building a parallel settlement
+      infrastructure, one that is faster, programmable, and accessible without reliance on legacy banking systems.</p>
+    <a class="btn btn-primary"
+      href="https://www.nasdaq.com/press-release/trident-digital-tech-holdings-and-ripple-strategy-holding-sign-strategic-cooperation"
+      target="_blank" rel="noopener">Read Full Article on Nasdaq ↗</a>
+  </div>
+</dialog>
+
+<dialog class="news-modal" id="modal-techafrica" aria-labelledby="modal-techafrica-title">
+  <button class="news-modal__close" type="button" aria-label="Close" data-close>✕</button>
+  <div class="news-modal__img"><img src="https://tridentaliska.com/images/news/world-technology.webp" alt=""
+      loading="lazy"></div>
+  <div class="news-modal__body">
+    <span class="news-tag">Fintech</span>
+    <h2 id="modal-techafrica-title">Trident Digital Tech Launches Sikaflow Digital Finance Platform in Ghana</h2>
+    <div class="news-meta"><time>23 June 2026</time><span>5 min read</span><span>Source: TechAfrica News</span></div>
+    <p>By combining digital commerce, business management, tax automation, financial record creation and financial
+      services enablement within a unified platform, Sikaflow is designed to help businesses transition from informal
+      economic activity into the formal financial ecosystem.</p>
+    <p>Trident Digital Tech Holdings Ltd., a digital infrastructure holding company focused on building and operating
+      sovereign-scale technology platforms across emerging markets, today announced the official launch of Sikaflow in
+      Ghana, a digital financial infrastructure platform designed to help modernize commerce, support economic
+      formalization and expand access to financial services for the country's micro, small and medium-sized enterprise
+      ("MSME") sector. Sikaflow is being deployed through Trident Aliska Digital Tech Ghana Ltd, the Company's
+      Ghana-based joint venture established to localize delivery, partnerships and operations of the platform
+      in-market.</p>
+    <p>Management believes the launch positions Trident at the center of a market opportunity encompassing more than 2
+      million MSMEs in Ghana and represents an important milestone in the Company's broader strategy to build
+      transaction-driven digital infrastructure ecosystems across Africa. By combining digital commerce, business
+      management, tax automation, financial record creation and financial services enablement within a unified platform,
+      Sikaflow is designed to help businesses transition from informal economic activity into the formal financial
+      ecosystem.</p>
+    <a class="btn btn-primary"
+      href="https://techafricanews.com/2026/06/23/trident-digital-tech-launches-sikaflow-digital-finance-platform-in-ghana/"
+      target="_blank" rel="noopener">Read Full Article on TechAfrica News ↗</a>
+  </div>
+</dialog>
+
+<dialog class="news-modal" id="modal-au-startups" aria-labelledby="modal-au-startups-title">
+  <button class="news-modal__close" type="button" aria-label="Close" data-close>✕</button>
+  <div class="news-modal__img"><img src="https://tridentaliska.com/images/news/newsplaceholder.jpeg" alt=""
+      loading="lazy"></div>
+  <div class="news-modal__body">
+    <span class="news-tag">Fintech</span>
+    <h2 id="modal-au-startups-title">Sikaflow's Ghana Launch Confronts MSME Formalization Headwinds</h2>
+    <div class="news-meta"><time>23 June 2026</time><span>5 min read</span><span>Source: AU-Startups</span></div>
+    <p>Trident Digital Tech Holdings rolls out a comprehensive digital platform in Ghana, aiming to formalize over 2
+      million MSMEs, but faces a market fraught with existing digital solutions and infrastructure gaps.</p>
+    <p>The promise of Sikaflow lies in its integrated approach. It bundles digital commerce, business management, tax
+      automation, and financial record creation into a single platform accessible via Android, iOS, web, POS
+      terminals, and even USSD channels. This multi-channel access, including offline capabilities, is a direct nod to
+      the varied connectivity realities across Ghana. The core value proposition is clear: transforming daily business
+      activities into verifiable digital financial records, which can then unlock access to credit and other financial
+      services for businesses that have historically operated without formal documentation.</p>
+    <h4>The Landscape of Formalization</h4>
+    <p>Ghana's fintech landscape is one of the most active in West Africa, with an estimated 200 firms operating
+      across payments, lending, insurtech, and regtech. Companies like Expresspay, Zeepay, Nsano, and Hubtel have
+      already made significant inroads in facilitating digital transactions and mobile money, which over 80% of
+      Ghanaian adults use. The challenge isn't a lack of digital tools, but rather the persistent hurdles of
+      technology adoption costs, inadequate infrastructure, and complex regulatory processes that discourage
+      formalization for many MSMEs.</p>
+    <a class="btn btn-primary" href="https://au-startups.com/news/sikaflow-ghana-msme-formalization" target="_blank"
+      rel="noopener">Read Full Article on AU-Startups ↗</a>
+  </div>
+</dialog>
+
+<dialog class="news-modal" id="modal-yahoo" aria-labelledby="modal-yahoo-title">
+  <button class="news-modal__close" type="button" aria-label="Close" data-close>✕</button>
+  <div class="news-modal__img"><img src="https://tridentaliska.com/images/news/yahfi.jpeg" alt="" loading="lazy">
+  </div>
+  <div class="news-modal__body">
+    <span class="news-tag">Business</span>
+    <h2 id="modal-yahoo-title">Trident Digital Tech Launches Sikaflow, a Digital Financial Infrastructure Platform
+      Designed to Accelerate Economic Formalization and MSME Growth in Ghana</h2>
+    <div class="news-meta"><time>23 June 2026</time><span>8 min read</span><span>Source: Yahoo! Finance</span></div>
+    <p><em>Platform is designed to support more than 2 million Ghanaian MSMEs, a sector representing approximately 80%
+        of national employment, while addressing a portion of Africa's estimated $5.2 trillion small-business
+        financing gap.</em></p>
+    <p>SINGAPORE, June 23, 2026 (GLOBE NEWSWIRE) -- Trident Digital Tech Holdings Ltd. (Nasdaq: TDTH) ("Trident" or
+      the "Company"), a digital infrastructure holding company focused on building and operating sovereign-scale
+      technology platforms across emerging markets, today announced the official launch of Sikaflow in Ghana, a
+      digital financial infrastructure platform designed to help modernize commerce, support economic formalization
+      and expand access to financial services for the country's micro, small and medium-sized enterprise ("MSME")
+      sector. Sikaflow is being deployed through Trident Aliska Digital Tech Ghana Ltd, the Company's Ghana-based joint
+      venture established to localize delivery, partnerships and operations of the platform in-market.</p>
+    <p>Management believes the launch positions Trident at the center of a market opportunity encompassing more than 2
+      million MSMEs in Ghana and represents an important milestone in the Company's broader strategy to build
+      transaction-driven digital infrastructure ecosystems across Africa.</p>
+    <a class="btn btn-primary"
+      href="https://finance.yahoo.com/small-business/articles/trident-digital-tech-launches-sikaflow-123000918.html"
+      target="_blank" rel="noopener">Read Full Article on Yahoo! Finance ↗</a>
+  </div>
+</dialog>
+
+<dialog class="news-modal" id="modal-jv-april" aria-labelledby="modal-jv-april-title">
+  <button class="news-modal__close" type="button" aria-label="Close" data-close>✕</button>
+  <div class="news-modal__img"><img src="https://tridentaliska.com/images/news/NASDAQ-Market-News.png" alt=""
+      loading="lazy"></div>
+  <div class="news-modal__body">
+    <span class="news-tag">Joint Venture Establishment</span>
+    <h2 id="modal-jv-april-title">Trident Digital Tech Holdings and Aliska Business Advisory launch joint venture to
+      accelerate Ghana's Digital Transformation</h2>
+    <div class="news-meta"><time>13 April 2026</time><span>5 min read</span><span>Source: Nasdaq press release</span>
+    </div>
+    <p>Trident Digital Tech Holdings Ltd. (Nasdaq: TDTH) ("Trident" or the "Company"), a Singapore-headquartered
+      digital technology company listed on Nasdaq, today announced that it has signed a 50/50 Joint Venture (JV)
+      agreement with Aliska Business Advisory and Research Limited ("Aliska"), a Ghana-based financial advisory and
+      technology services firm. The resulting JV entity, Trident Aliska Digital Tech Ghana Ltd., will jointly develop
+      and commercialize proprietary digital technology solutions for public and private sector clients across Ghana,
+      with projected combined revenue of up to US$800 million over the first five years of operation.</p>
+    <p>Under the terms of the agreement, Trident will lead technology development, platform engineering, and technical
+      system management, while Aliska will focus on project research, design, securing government approvals, permits,
+      and project funding. Both parties will jointly oversee system maintenance, AI and machine learning component
+      upgrades, and the operational training required to support the nationwide deployment of all technology solutions
+      developed under the partnership.</p>
+    <a class="btn btn-primary"
+      href="https://www.nasdaq.com/press-release/trident-digital-tech-holdings-establishes-joint-venture-drive-ghanas-digital"
+      target="_blank" rel="noopener">Read Full Article on Nasdaq ↗</a>
+  </div>
+</dialog>
+
 <!-- Footer -->
 <footer class="site-footer ftr">
-  <div class="ftr__cta">
-    <div class="container ftr__cta-inner">
-      <div>
-        <span class="eyebrow">Let's work together</span>
-        <h2>Ready to grow with confidence?</h2>
-      </div>
-      <div class="ftr__cta-actions">
-        <a href="book-a-session.html" class="btn btn-primary">Book a session</a>
-        <a href="contact.html" class="btn btn-outline">Contact us</a>
-      </div>
-    </div>
-  </div>
 
   <div class="ftr__main container">
     <div class="ftr__brand">
       <a href="index.html">
         <span class="logo"><img src="images/logo-white.png" alt=""></span>
       </a>
-      <p>We are best known for quality work. We work with individuals, start-ups, large and midsize businesses, multi-national corporations, government agencies and non-profit organisations.</p>
+      <p>Aliska is an indigenous Ghanaian strategy and research firm, founded in 2011 and based in East Legon, Accra. We are best known for quality work.</p>
       <div class="ftr__social">
         <a href="https://twitter.com/aliska_consult" aria-label="Aliska on Twitter" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
@@ -221,16 +431,14 @@
     </div>
 
     <div class="ftr__col">
-      <h4>Our Services</h4>
-      <ul>
-        <li><a href="our-services.html">Financial Advisory</a></li>
-        <li><a href="our-services.html">Business Management</a></li>
-        <li><a href="our-services.html">MSMEs Development and Sustainability</a></li>
-        <li><a href="our-services.html">IT Advisory</a></li>
-        <li><a href="our-services.html">Corporate Strategy Consulting</a></li>
-        <li><a href="our-services.html">Accounting &amp; Tax Advisory</a></li>
-        <li><a href="our-services.html">Project Management</a></li>
-      </ul>
+      <h4>What We Do</h4>
+        <ul>
+          <li><a href="our-services.html#research">Research &amp; Insight</a></li>
+          <li><a href="our-services.html#policy">Policy &amp; National Development</a></li>
+          <li><a href="our-services.html#digital">Digital Transformation Products</a></li>
+          <li><a href="our-services.html#advisory">Business &amp; Financial Advisory</a></li>
+          <li><a href="commodities.html">Market Research</a></li>
+        </ul>
     </div>
 
     <div class="ftr__col">
@@ -264,16 +472,40 @@
 
   <div class="ftr__bottom container">
     <span>&copy; <span id="year"></span> Aliska Business Advisory and Research. All rights reserved.</span>
-    <a href="#page-top" class="ftr__back-top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    <div>
+      <div class="footer-bottom__legal">
+        <a class="footer-empty" href="https://emptyroom.aliskaconsult.com" target="_blank" rel="noopener">The Empty Room &#8599;</a>
+        <a class="footer-empty" href="privacy-policy.html">Privacy policy</a>
+        <!-- <button class="footer-legal-link footer-empty cookie-settings" type="button">Cookie settings</button> -->
+        <a href="#page-top" class="ftr__back-top">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <div class="cookie-banner">
-  <p>By continuing to use this website, you consent to the use of cookies in accordance with our <a href="#">Cookie Policy</a>.</p>
+  <p>By continuing to use this website, you consent to the use of cookies in accordance with our <a href="#">Cookie
+      Policy</a>.</p>
   <button class="btn btn-primary cookie-accept" type="button">Accept</button>
 </div>
 
 <script src="js/main.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+/* Cookie settings: reopen the consent banner by clearing any stored consent */
+document.querySelectorAll('.cookie-settings').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    try {
+      localStorage.removeItem('cookieConsent');
+      localStorage.removeItem('cookiesAccepted');
+      localStorage.removeItem('cookieAccepted');
+    } catch (e) { /* storage unavailable — banner will just show */ }
+    var banner = document.querySelector('.cookie-banner');
+    if (banner) banner.classList.add('is-visible');
+  });
+});
+</script>
 </body>
 </html>

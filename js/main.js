@@ -32,6 +32,31 @@
     mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
   }
 
+   /* ---------------------------- Insights submenu --------------------------- */
+  const subItems = document.querySelectorAll('.has-sub');
+  function closeSubs(except) {
+    subItems.forEach((item) => {
+      if (item === except) return;
+      item.classList.remove('is-open');
+      item.querySelector('.nav-sub-toggle').setAttribute('aria-expanded', 'false');
+    });
+  }
+  subItems.forEach((item) => {
+    const btn = item.querySelector('.nav-sub-toggle');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeSubs(item);
+      const open = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    item.addEventListener('focusout', (e) => {
+      if (!item.contains(e.relatedTarget)) closeSubs();
+    });
+  });
+  document.addEventListener('click', () => closeSubs());
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSubs(); });
+ 
+
   /* ------------------------------ Dark mode ------------------------------ */
   const themeToggle = document.querySelector('.theme-toggle');
   const root = document.documentElement;
@@ -204,4 +229,25 @@
 
   const bookingForm = document.querySelector('#booking-form');
   if (bookingForm) handleAjaxForm(bookingForm, 'booking-handler.php');
+
+   /* ----------------------------- News previews ----------------------------- */
+  // Cards link straight to the source without JS; with JS they open a
+  // native <dialog> preview first, which then offers the external link.
+  document.querySelectorAll('[data-modal]').forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      const dialog = document.getElementById(trigger.dataset.modal);
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      e.preventDefault();
+      dialog.showModal();
+      document.body.classList.add('modal-open');
+      const body = dialog.querySelector('.news-modal__body');
+      if (body) body.scrollTop = 0;
+    });
+  });
+  document.querySelectorAll('.news-modal').forEach((dialog) => {
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog || e.target.closest('[data-close]')) dialog.close();
+    });
+    dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+  });
 })();
